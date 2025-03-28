@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Platform Survey</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; }
+        .container { max-width: 700px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        .question { font-weight: bold; margin-top: 20px; }
+        .options { margin-bottom: 10px; }
+        textarea { width: 100%; height: 60px; }
+        button { padding: 10px; background: blue; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <h2>Trading Platform Survey</h2>
+        <form id="surveyForm">
+
+
+            <!-- Identity field -->
+            <div class="question">Your First Name:</div>
+                <input type="text" name="first_name" required>
+
+            <div class="question">Your Last Name:</div>
+                <input type="text" name="last_name" required>
+
+            <div class="question">Your Email:</div>
+                <input type="email" name="email" required>
+
+
+            <!-- Question 1 -->
+            <div class="question">1. How long have you been trading?</div>
+            <div class="options">
+                <input type="radio" name="trading_experience" value="Less than 1 year"> Less than 1 year<br>
+                <input type="radio" name="trading_experience" value="1-3 years"> 1-3 years<br>
+                <input type="radio" name="trading_experience" value="3-5 years"> 3-5 years<br>
+                <input type="radio" name="trading_experience" value="More than 5 years"> More than 5 years<br>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">2. What type of assets do you trade? (Select all that apply)</div>
+            <div class="options">
+                <input type="checkbox" name="assets" value="Stocks"> Stocks<br>
+                <input type="checkbox" name="assets" value="Forex"> Forex<br>
+                <input type="checkbox" name="assets" value="Crypto"> Crypto<br>
+                <input type="checkbox" name="assets" value="Options"> Options<br>
+                <input type="checkbox" name="assets" value="Futures"> Futures<br>
+                <input type="checkbox" name="assets" value="Commodities"> Commodities<br>
+                <input type="text" name="assets_other" placeholder="Other (please specify)">
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">3. How frequently do you trade?</div>
+            <div class="options">
+                <input type="radio" name="trading_frequency" value="Daily"> Daily<br>
+                <input type="radio" name="trading_frequency" value="Weekly"> Weekly<br>
+                <input type="radio" name="trading_frequency" value="Monthly"> Monthly<br>
+                <input type="radio" name="trading_frequency" value="Occasionally"> Occasionally<br>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">4. What is your primary trading strategy?</div>
+            <div class="options">
+                <input type="radio" name="trading_strategy" value="Day trading"> Day trading<br>
+                <input type="radio" name="trading_strategy" value="Swing trading"> Swing trading<br>
+                <input type="radio" name="trading_strategy" value="Algorithmic trading"> Algorithmic trading<br>
+                <input type="radio" name="trading_strategy" value="Long-term investing"> Long-term investing<br>
+                <input type="text" name="strategy_other" placeholder="Other (please specify)">
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">5. How satisfied are you with our trading platform? (1-5 scale)</div>
+            <select name="platform_satisfaction">
+                <option value="5">Very Satisfied</option>
+                <option value="4">Satisfied</option>
+                <option value="3">Neutral</option>
+                <option value="2">Dissatisfied</option>
+                <option value="1">Very Dissatisfied</option>
+            </select>
+
+
+            <!-- Question 6 -->
+            <div class="question">6. What features do you use the most? (Select all that apply)</div>
+            <div class="options">
+                <input type="checkbox" name="features" value="Live trading"> Live trading<br>
+                <input type="checkbox" name="features" value="Paper trading"> Paper trading<br>
+                <input type="checkbox" name="features" value="Charting tools"> Charting tools<br>
+                <input type="checkbox" name="features" value="Backtesting"> Backtesting<br>
+                <input type="checkbox" name="features" value="Automated strategies"> Automated strategies<br>
+                <input type="checkbox" name="features" value="Market news & data"> Market news & data<br>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">7. How would you rate the platform's speed and reliability?</div>
+            <div class="options">
+                <input type="radio" name="speed_reliability" value="Excellent"> Excellent<br>
+                <input type="radio" name="speed_reliability" value="Good"> Good<br>
+                <input type="radio" name="speed_reliability" value="Average"> Average<br>
+                <input type="radio" name="speed_reliability" value="Poor"> Poor<br>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">8. Have you encountered any technical issues while using the platform?</div>
+            <div class="options">
+                <input type="radio" name="technical_issues" value="Yes"> Yes (please specify)<br>
+                <textarea name="technical_issue_details"></textarea><br>
+                <input type="radio" name="technical_issues" value="No"> No<br>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">9. Have you used our backtesting feature?</div>
+            <div class="options">
+                <input type="radio" name="backtesting_usage" value="Yes, frequently"> Yes, frequently<br>
+                <input type="radio" name="backtesting_usage" value="Yes, occasionally"> Yes, occasionally<br>
+                <input type="radio" name="backtesting_usage" value="No, but I plan to"> No, but I plan to<br>
+                <input type="radio" name="backtesting_usage" value="No, and I don't plan to"> No, and I don't plan to<br>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">10. How would you rate the accuracy of backtesting results? (1-5 scale)</div>
+            <select name="backtesting_accuracy">
+                <option value="5">5 - Very Accurate</option>
+                <option value="4">4</option>
+                <option value="3">3 - Neutral</option>
+                <option value="2">2</option>
+                <option value="1">1 - Very Inaccurate</option>
+            </select>
+
+            <!-- Question 11 -->
+            <div class="question">11. What improvements would you like to see in the backtesting tool?</div>
+            <textarea name="backtesting_improvements"></textarea>
+
+            <!-- Question 12 -->
+            <div class="question">12. What timeframes do you primarily backtest on?</div>
+            <div class="options">
+                <input type="radio" name="backtest_timeframe" value="Intraday (1 min – 1 hour)"> Intraday (1 min – 1 hour)<br>
+                <input type="radio" name="backtest_timeframe" value="Short-term (1 day – 1 week)"> Short-term (1 day – 1 week)<br>
+                <input type="radio" name="backtest_timeframe" value="Medium-term (1 week – 1 month)"> Medium-term (1 week – 1 month)<br>
+                <input type="radio" name="backtest_timeframe" value="Long-term (1 month+)"> Long-term (1 month+)<br>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="question">13. How important is historical data coverage for you?</div>
+            <div class="options">
+                <input type="radio" name="historical_data_importance" value="Very Important"> Very Important<br>
+                <input type="radio" name="historical_data_importance" value="Somewhat Important"> Somewhat Important<br>
+                <input type="radio" name="historical_data_importance" value="Not Important"> Not Important<br>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="question">14. What additional learning resources would you like us to provide? (Select all that apply)</div>
+            <div class="options">
+                <input type="checkbox" name="learning_resources" value="Video tutorials"> Video tutorials<br>
+                <input type="checkbox" name="learning_resources" value="Webinars"> Webinars<br>
+                <input type="checkbox" name="learning_resources" value="Blog articles"> Blog articles<br>
+                <input type="checkbox" name="learning_resources" value="Step-by-step guides"> Step-by-step guides<br>
+                <input type="text" name="learning_resources_other" placeholder="Other (please specify)">
+            </div>
+
+            <!-- Question 15 -->
+            <div class="question">15. What features would you like to see added to the platform?</div>
+            <textarea name="feature_requests"></textarea>
+
+            <!-- Question 16 -->
+            <div class="question">16. How likely are you to recommend this platform to other traders? (1-5 scale)</div>
+            <select name="recommendation_score">
+                <option value="5">5 - Very Likely</option>
+                <option value="4">4</option>
+                <option value="3">3 - Neutral</option>
+                <option value="2">2</option>
+                <option value="1">1 - Not Likely</option>
+            </select>
+
+             <!-- Question 17 -->
+            <div class="question">17. Any additional comments or suggestions?</div>
+            <textarea name="comments"></textarea>
+
+            <button type="submit">Submit</button>
+
+
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("surveyForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+    
+            const formData = new FormData(event.target);
+            const data = {};
+    
+            // Convert FormData entries to an object and properly handle checkboxes
+            formData.forEach((value, key) => {
+                if (data[key]) {
+                    if (!Array.isArray(data[key])) {
+                        data[key] = [data[key]]; // Convert to an array if it's not already
+                    }
+                    data[key].push(value);
+                } else {
+                    data[key] = value;
+                }
+            });
+    
+            // Convert arrays to JSON strings for multi-select fields
+            if (Array.isArray(data.assets)) data.assets = JSON.stringify(data.assets);
+            if (Array.isArray(data.features)) data.features = JSON.stringify(data.features);
+            if (Array.isArray(data.learning_resources)) data.learning_resources = JSON.stringify(data.learning_resources);
+    
+            try {
+                const response = await fetch("http://localhost:3000/submit", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                });
+    
+                const result = await response.json(); // Corrected line
+                alert(result.message);
+            } catch (error) {
+                alert("Error submitting survey!");
+            }
+        });
+    </script>
+    
+
+</body>
+</html>
